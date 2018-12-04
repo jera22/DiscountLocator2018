@@ -18,6 +18,9 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.crashes.Crashes;
 
 import com.air.ws.core.CurrentActivity;
 
@@ -33,8 +36,11 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
     ActionBarDrawerToggle drawerToggle;
     NavigationView navigationView;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        AppCenter.start(getApplication(), "f1c0ef31-705f-4335-937d-0dbc9a26d3ee", Analytics.class, Crashes.class);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         MainDatabase.initDatabase(this);
