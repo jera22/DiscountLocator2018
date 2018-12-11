@@ -1,7 +1,6 @@
 package air18.foi.hr.discountlocator.adapters;
 
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentManager;
@@ -17,7 +16,6 @@ import air18.foi.hr.database.entities.Discount;
 import air18.foi.hr.database.entities.Store;
 import air18.foi.hr.discountlocator.R;
 import air18.foi.hr.discountlocator.fragments.DiscountDetailsFragment;
-import air18.foi.hr.discountlocator.fragments.DiscountListFragment;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -54,7 +52,7 @@ public class DiscountViewHolder extends ChildViewHolder {
         mDiscount = discount;
         mDiscountName.setText(discount.getName());
         mDiscountDesc.setText(discount.getDescription());
-        mDiscountValue.setText(discount.getDiscount() + "%");
+        mDiscountValue.setText(discount.getDiscount_value() + "%");
     }
 
     @OnClick

@@ -22,7 +22,7 @@ public class Discount extends BaseModel {
     @Column int storeId;
     @Column Date startDate; // java.util.Date
     @Column Date endDate;
-    @Column int discount;
+    @Column int discount_value;
 
     @Column
     @ForeignKey(tableClass = Store.class)
@@ -31,14 +31,14 @@ public class Discount extends BaseModel {
     public Discount() {
     }
 
-    public Discount(int id, String name, String description, int storeId, Date startDate, Date endDate, int discount) {
+    public Discount(int id, String name, String description, int storeId, Date startDate, Date endDate, int discount_value) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.storeId = storeId;
         this.startDate = startDate;
         this.endDate = endDate;
-        this.discount = discount;
+        this.discount_value = discount_value;
     }
     public static List<Discount> getAll() {
         return SQLite.select().from(Discount.class).queryList();
@@ -92,12 +92,12 @@ public class Discount extends BaseModel {
         this.endDate = endDate;
     }
 
-    public int getDiscount() {
-        return discount;
+    public int getDiscount_value() {
+        return discount_value;
     }
 
-    public void setDiscount(int discount) {
-        this.discount = discount;
+    public void setDiscount_value(int discount_value) {
+        this.discount_value = discount_value;
     }
 
     public Store getStore() {
