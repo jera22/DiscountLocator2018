@@ -7,8 +7,8 @@ import air18.foi.hr.database.entities.Store;
 
 public abstract class DataLoader {
 
-   static public ArrayList<Store> stores;
-   static public ArrayList<Discount> discounts;
+   static public final ArrayList<Store> stores = null;
+   static public final ArrayList<Discount> discounts = null;
 
     protected DataLoadedListener mDataLoadedListener;
 
