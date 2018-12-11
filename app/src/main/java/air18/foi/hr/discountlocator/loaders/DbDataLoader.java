@@ -19,6 +19,7 @@ public class DbDataLoader extends DataLoader {
             mDataLoadedListener.onDataLoaded(stores, discounts);
 
         }catch (NullPointerException e){
+
             e.printStackTrace();
         }
     }
