@@ -31,7 +31,7 @@ public class MainDatabase {
         }
 
         List<Discount> discounts =
-                SQLite.select().from(Discount.class).where(Discount_Table.discount.greaterThan(5)).queryList();
+                SQLite.select().from(Discount.class).where(Discount_Table.discount_value.greaterThan(5)).queryList();
 
         //convert to array of strings
         String[] listItems = new String[discounts.size()];
